@@ -1,5 +1,51 @@
 .hero {
+  padding: 40px 15px;
+  font-size: 20px;
+  color: rgb(0, 0, 1);
+  line-height: 1.2;
+  text-align: center;
+  background-color: #f7f7f7;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
 
+  h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: rgb(0, 0, 1);
+    font-weight: 700;
+    line-height: 0.97;
+
+    span {
+      display: block;
+      position: relative;
+      font-size: 14px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      color: rgb(0, 0, 0);
+      font-style: italic;
+      line-height: 1.462;
+
+      &:before {
+        @include absoluteCenterY();
+        left: 0;
+        width: 14px;
+        height: 2px;
+        background-color: #000;
+        content: '';
+      }
+    }
+  }
+
+  p {
+    max-width: 770px;
+    margin: 0 auto 40px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 @media (min-width: $phone-landscape) {
   .hero {
@@ -8,7 +54,7 @@
 }
 @media (min-width: $tablet-portrait) {
   .hero {
-
+    padding: 40px calc(50% - 300px);
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -18,7 +64,31 @@
 }
 @media (min-width: $desktop) {
   .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 397px;
+    padding: 40px calc(50% - 525px);
+    font-size: 30px;
 
+    &_main {
+      height: 860px;
+    }
+
+    h2 {
+      margin-bottom: 32px;
+      font-size: 66px;
+
+      span {
+        font-size: 26px;
+
+        &:before { width: 28px }
+      }
+    }
+
+    p {
+      margin: 0 auto 110px;
+    }
   }
 }
-

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 "use strict";
 ( function(){
 
@@ -66,8 +67,8 @@
             },
             _showActiveContent = function(activeIndex) {
                 _tabsContent.removeClass('active');
-                _tabsContent.eq(activeIndex - 1).addClass('active');
-                _tabsContentWrap.css({ 'height': _tabsContent.eq(activeIndex - 1).outerHeight() + 'px' });
+                _tabsContent.eq(activeIndex).addClass('active');
+                _tabsContentWrap.css({ 'height': _tabsContent.eq(activeIndex).outerHeight() + 'px' });
             },
             _init = function() {
                 _addEvents();

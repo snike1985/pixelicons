@@ -1,0 +1,29 @@
+.arrow {
+  position: relative;
+  padding-right: 40px;
+  color: #006ce7;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    transform: rotate(45deg);
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #006ce7;
+    box-sizing: border-box;
+    content: '';
+  }
+
+  &:before {
+    @include absoluteCenterY();
+    right: 1px;
+    width: 29px;
+    height: 2px;
+    background-color: #006ce7;
+    content: '';
+  }
+}

@@ -16,8 +16,11 @@ const plugin_ExtractSass = new ExtractTextPlugin({
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        aboutus_page: './aboutus_page',
+        about_page: './about_page',
+        affiliate_page: './affiliate_page',
         index_page: './index_page',
+        license_page: './license_page',
+        privacyPolicy_page: './privacyPolicy_page',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

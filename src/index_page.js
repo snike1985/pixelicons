@@ -1,3 +1,4 @@
 import './js/menu';
-import './js/jquery.main';
+import './js/testimonials';
+import './js/jquery.tab';
 import './scss/index_page.scss';

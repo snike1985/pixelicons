@@ -27,8 +27,11 @@
       a:visited {
         font-size: 16px;
         color: rgb(0, 0, 0);
-        line-height: 1.9;
+        border-bottom: 4px solid transparent;
+        transition: border .3s ease-in-out;
         @include proximanova-semibold();
+
+        &:hover { border-bottom-color: #000 }
       }
     }
   }
@@ -44,7 +47,12 @@
     flex: 0 0 auto;
     text-align: center;
     width: 100%;
-
+    padding: 44px;
+    font-size: 23px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: rgb(68, 68, 68);
+    line-height: 1.2;
   }
 }
 @media (min-width: $phone-landscape) {

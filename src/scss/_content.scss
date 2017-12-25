@@ -1,0 +1,90 @@
+.content {
+  padding: 15px;
+  font-size: 22px;
+  color: rgb(51, 51, 51);
+  line-height: 1.2;
+  @include proximanova-light();
+
+  &__italic {
+    font-style: italic;
+    color: #999999;
+  }
+
+  h2 {
+    font-size: 22px;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    @include proximanova-semibold();
+  }
+
+  p {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+    }
+
+    a,
+    a:visited {
+      color: #006ce7;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+
+    li {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 13px;
+        left: -18px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #999999;
+        content: '';
+      }
+
+      a,
+      a:visited {
+        color: #006ce7;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .content {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .content {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .content {
+
+  }
+}
+@media (min-width: $desktop) {
+  .content {
+    padding: 100px calc(50% - 400px);
+  }
+}

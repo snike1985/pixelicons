@@ -42,7 +42,7 @@
 }
 @media (min-width: $tablet-portrait) {
   .info-block {
-
+    padding: 40px calc(50% - 300px);
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -59,6 +59,33 @@
     height: 860px;
     padding: 40px calc(50% - 525px);
     font-size: 30px;
+
+    &_horizon {
+      flex-direction: row;
+      padding: 40px 0 40px calc(50% - 525px);
+      text-align: left;
+
+      .info-block__wrap {
+        width: 560px;
+        padding-right: 100px;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      img {
+        width: 886px;
+        height: 493px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    &__wrap {
+
+    }
 
     h2 {
       margin-bottom: 32px;
