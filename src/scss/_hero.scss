@@ -1,5 +1,5 @@
 .hero {
-  padding: 40px 15px;
+  padding: 80px 15px 40px;
   font-size: 20px;
   color: rgb(0, 0, 1);
   line-height: 1.2;
@@ -8,37 +8,39 @@
   font-family: 'Playfair Display', serif;
   font-weight: 400;
 
+  &__subtitle {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    line-height: 1.462;
+
+    &:before {
+      @include absoluteCenterY();
+      left: 0;
+      width: 14px;
+      height: 2px;
+      background-color: #000;
+      content: '';
+    }
+  }
+
   h2 {
     margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 60px;
     color: rgb(0, 0, 1);
     font-weight: 700;
     line-height: 0.97;
-
-    span {
-      display: block;
-      position: relative;
-      font-size: 14px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 400;
-      color: rgb(0, 0, 0);
-      font-style: italic;
-      line-height: 1.462;
-
-      &:before {
-        @include absoluteCenterY();
-        left: 0;
-        width: 14px;
-        height: 2px;
-        background-color: #000;
-        content: '';
-      }
-    }
   }
 
   p {
     max-width: 770px;
-    margin: 0 auto 40px;
+    margin: 0 auto 10px;
   }
 
   img {
@@ -68,27 +70,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 397px;
-    padding: 40px calc(50% - 525px);
-    font-size: 30px;
+    min-height: 397px;
+    padding: 118px calc(50% - 525px) 40px;
+    font-size: 34px;
 
     &_main {
       height: 860px;
-    }
+      padding: 40px calc(50% - 525px);
 
-    h2 {
-      margin-bottom: 32px;
-      font-size: 66px;
-
-      span {
+      .hero__subtitle {
+        padding-left: 38px;
         font-size: 26px;
 
         &:before { width: 28px }
       }
+
+      h2 {
+        margin-bottom: 26px;
+        font-size: 120px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 66px;
     }
 
     p {
-      margin: 0 auto 110px;
+
     }
   }
 }

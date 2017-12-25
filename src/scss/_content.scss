@@ -1,24 +1,26 @@
 .content {
   padding: 15px;
-  font-size: 22px;
+  font-size: 12px;
   color: rgb(51, 51, 51);
   line-height: 1.2;
   @include proximanova-light();
 
   &__italic {
+    padding-top: 6px;
     font-style: italic;
     color: #999999;
   }
 
   h2 {
-    font-size: 22px;
+    padding: 10px 0 5px;
+    font-size: 16px;
     color: rgb(51, 51, 51);
     line-height: 1.2;
     @include proximanova-semibold();
   }
 
   p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     span {
       display: block;
@@ -35,20 +37,25 @@
   }
 
   ul {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     li {
       position: relative;
+      margin-bottom: 10px;
 
       &:before {
         position: absolute;
-        top: 13px;
-        left: -18px;
+        top: 4px;
+        left: -10px;
         width: 6px;
         height: 6px;
         border-radius: 50%;
         background-color: #999999;
         content: '';
+      }
+
+      p {
+        margin-bottom: 10px;
       }
 
       a,
@@ -65,7 +72,7 @@
   img {
     display: block;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 10px;
   }
 }
 @media (min-width: $phone-landscape) {
@@ -85,6 +92,37 @@
 }
 @media (min-width: $desktop) {
   .content {
-    padding: 100px calc(50% - 400px);
+    padding: 112px calc(50% - 398px);
+    font-size: 22px;
+
+    h2 {
+      padding: 25px 0 5px;
+      font-size: 22px;
+    }
+
+    p {
+      margin-bottom: 28px;
+    }
+
+    ul {
+      margin-bottom: 28px;
+
+      li {
+        margin-bottom: 17px;
+
+        &:before {
+          top: 7px;
+          left: -21px;
+        }
+
+        p {
+          margin-bottom: 17px;
+        }
+      }
+    }
+
+    img {
+      margin: 0 auto 28px;
+    }
   }
 }
