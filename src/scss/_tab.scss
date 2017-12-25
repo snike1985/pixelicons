@@ -13,7 +13,7 @@
       cursor: pointer;
       text-align: center;
       border-bottom: 2px solid transparent;
-      transition: border .3s ease-in-out;
+      transition: opacity .3s ease-in-out, border .3s ease-in-out;
       font-size: 12px;
       letter-spacing: 0;
       color: rgb(21, 20, 20);
@@ -27,7 +27,7 @@
       }
 
       &:hover {
-        border-bottom-color: #000;
+        opacity: .8;
       }
     }
   }

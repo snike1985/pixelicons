@@ -18,6 +18,7 @@ module.exports = {
     entry: {
         about_page: './about_page',
         affiliate_page: './affiliate_page',
+        blogMain_page: './blogMain_page',
         index_page: './index_page',
         license_page: './license_page',
         privacyPolicy_page: './privacyPolicy_page',

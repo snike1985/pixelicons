@@ -1,0 +1,159 @@
+.blog-preview {
+  padding: 40px 15px;
+
+  &__list {
+
+  }
+
+  &__item {
+    padding-bottom: 30px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid #f3f3f3;
+  }
+
+  &__picture {
+    display: block;
+    margin-bottom: 15px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:hover img { opacity: .8 }
+  }
+
+  &__description {
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    line-height: 1.364;
+    @include proximanova-light();
+
+    h2 {
+      margin-bottom: 2px;
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+      line-height: 1.2;
+      @include proximanova-regular();
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__time {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.502);
+    line-height: 1.667;
+    @include proximanova-regular();
+  }
+
+  .arrow {
+    font-size: 14px;
+    @include proximanova-regular();
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    .arrow {
+      color: #000;
+    }
+
+    .social {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 50%;
+      transform: translate(-50%,0);
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .blog-preview {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .blog-preview {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .blog-preview {
+
+  }
+}
+@media (min-width: $desktop) {
+  .blog-preview {
+    padding: 80px calc(50% - 470px);
+
+    &__list {
+
+    }
+
+    &__item {
+      display: flex;
+      padding-bottom: 80px;
+      margin-bottom: 82px;
+    }
+
+    &__picture {
+      width: 300px;
+      margin: 0;
+    }
+
+    &__description {
+      width: calc(100% - 300px);
+      padding-left: 30px;
+      font-size: 22px;
+
+      h2 {
+        padding-left: 3px;
+        font-size: 30px;
+      }
+
+      p {
+        overflow: hidden;
+        height: 90px;
+        margin-bottom: 14px;
+      }
+    }
+
+    &__time {
+      margin-bottom: 14px;
+      padding-left: 2px;
+      font-size: 18px;
+    }
+
+    .arrow {
+      font-size: 20px;
+    }
+
+    &__navigation {
+      margin-bottom: 0;
+
+      .arrow {
+        order: 3;
+        color: #000;
+
+        &:first-child { order: 1 }
+      }
+
+      .social {
+        position: relative;
+        left: auto;
+        transform: translate(0,0);
+        order: 2;
+      }
+    }
+  }
+}

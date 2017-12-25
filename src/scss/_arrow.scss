@@ -13,7 +13,7 @@
     transform: rotate(45deg);
     border-width: 2px 2px 0 0;
     border-style: solid;
-    border-color: #006ce7;
+    border-color: inherit;
     box-sizing: border-box;
     content: '';
   }
@@ -23,8 +23,26 @@
     right: 1px;
     width: 15px;
     height: 2px;
-    background-color: #006ce7;
+    box-sizing: border-box;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: inherit;
     content: '';
+  }
+
+  &_revert {
+    padding: 0 0 0 20px;
+
+    &:after {
+      right: auto;
+      left: 0;
+      transform: rotate(-135deg);
+    }
+
+    &:before {
+      right: auto;
+      left: 1px;
+    }
   }
 }
 @media (min-width: $desktop) {
@@ -41,7 +59,6 @@
 
     &:before {
       width: 29px;
-      height: 2px;
       transition: right .3s ease-in-out;
     }
 
@@ -49,6 +66,21 @@
 
       &:before { right: -4px }
       &:after { right: -5px }
+    }
+
+    &_revert {
+      padding: 0 0 0 40px;
+
+      &:before,
+      &:after {
+        transition: left .3s ease-in-out;
+      }
+
+      &:hover {
+
+        &:before { left: -4px }
+        &:after { left: -5px }
+      }
     }
   }
 }
