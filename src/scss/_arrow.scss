@@ -1,15 +1,15 @@
 .arrow {
   position: relative;
-  padding-right: 40px;
+  padding-right: 20px;
   color: #006ce7;
 
   &:after {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 10px;
-    height: 10px;
-    margin-top: -5px;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
     transform: rotate(45deg);
     border-width: 2px 2px 0 0;
     border-style: solid;
@@ -21,9 +21,34 @@
   &:before {
     @include absoluteCenterY();
     right: 1px;
-    width: 29px;
+    width: 15px;
     height: 2px;
     background-color: #006ce7;
     content: '';
+  }
+}
+@media (min-width: $desktop) {
+  .arrow {
+    padding-right: 40px;
+
+    &:after {
+      width: 10px;
+      height: 10px;
+      margin-top: -5px;
+      border-width: 2px 2px 0 0;
+      transition: right .3s ease-in-out;
+    }
+
+    &:before {
+      width: 29px;
+      height: 2px;
+      transition: right .3s ease-in-out;
+    }
+
+    &:hover {
+
+      &:before { right: -4px }
+      &:after { right: -5px }
+    }
   }
 }

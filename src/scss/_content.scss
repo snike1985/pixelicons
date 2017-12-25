@@ -46,9 +46,9 @@
       &:before {
         position: absolute;
         top: 4px;
-        left: -10px;
-        width: 6px;
-        height: 6px;
+        left: -8px;
+        width: 4px;
+        height: 4px;
         border-radius: 50%;
         background-color: #999999;
         content: '';
@@ -113,6 +113,8 @@
         &:before {
           top: 7px;
           left: -21px;
+          width: 6px;
+          height: 6px;
         }
 
         p {
