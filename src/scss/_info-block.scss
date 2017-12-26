@@ -14,6 +14,10 @@
   &_bottom {
     overflow: hidden;
     padding-bottom: 0;
+
+    > img {
+      margin-bottom: -50px;
+    }
   }
 
   h2 {
@@ -29,10 +33,26 @@
     margin: 0 auto 40px;
   }
 
-  img {
+  > img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  &__informer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0 25px;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    line-height: 2.375;
+    @include proximanova-light();
+
+    img {
+      height: 19px;
+      margin: -5px 12px 0 0;
+    }
   }
 }
 @media (min-width: $phone-landscape) {
@@ -57,36 +77,8 @@
     align-items: center;
     justify-content: center;
     min-height: 860px;
-    padding: 40px calc(50% - 525px);
+    padding: 24px calc(50% - 525px) 40px;
     font-size: 30px;
-
-    &_horizon {
-      flex-direction: row;
-      padding: 40px 0 40px calc(50% - 525px);
-      text-align: left;
-
-      .info-block__wrap {
-        width: 560px;
-        padding-right: 100px;
-
-        p {
-          margin-bottom: 0;
-        }
-      }
-
-      img {
-        width: 886px;
-        height: 493px;
-        border-radius: 5px;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.12);
-      }
-    }
-
-    &_bottom {
-      justify-content: space-between;
-      padding: 143px calc(50% - 525px) 0;
-    }
 
     &__wrap {
 
@@ -99,6 +91,128 @@
 
     p {
       margin: 0 auto 110px;
+    }
+
+    &__informer {
+      justify-content: flex-start;
+      padding: 20px 0 25px;
+    }
+
+    &_horizon {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 206px 0 40px calc(50% - 542px);
+      text-align: left;
+
+      .info-block__wrap {
+        width: 704px;
+        padding: 52px 100px 0 0;
+
+        h2 {
+          margin-bottom: 32px;
+        }
+
+        p {
+          margin-bottom: 0;
+          line-height: 1.3;
+        }
+      }
+
+      > img {
+        width: 886px;
+        height: 493px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    &_bottom {
+      justify-content: space-between;
+      padding: 143px calc(50% - 525px) 0;
+
+      h2 {
+        margin-bottom: 32px;
+      }
+
+      p {
+        margin-bottom: 134px;
+      }
+
+      > img {
+        margin-bottom: -114px;
+      }
+    }
+
+    &_pixel {
+      padding-top: 78px;
+
+      h2 {
+        margin-bottom: 32px;
+      }
+
+      p {
+        margin-bottom: 36px;
+      }
+    }
+
+    &_formats {
+      padding-top: 109px;
+      padding-bottom: 221px;
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    &_materials {
+      padding-top: 40px;
+
+      h2 {
+        margin-bottom: 31px;
+      }
+
+      p {
+        margin-bottom: 99px;
+      }
+    }
+
+    &_optimized {
+      padding-top: 7px;
+
+      h2 {
+        margin-bottom: 35px;
+      }
+
+      p {
+        max-width: 900px;
+        margin-bottom: 86px;
+      }
+    }
+
+    &_perfection {
+
+      h2 {
+        margin-bottom: 31px;
+      }
+
+      p {
+        margin-bottom: 153px;
+      }
+    }
+
+    &_trusted {
+      min-height: 0;
+      padding-top: 175px;
+      padding-bottom: 177px;
+
+      h2 {
+        margin-bottom: 31px;
+      }
+
+      p {
+        margin-bottom: 52px;
+      }
     }
   }
 }

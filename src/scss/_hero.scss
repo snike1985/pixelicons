@@ -71,25 +71,8 @@
     align-items: center;
     justify-content: center;
     min-height: 397px;
-    padding: 118px calc(50% - 525px) 40px;
+    padding: 62px calc(50% - 525px) 40px;
     font-size: 34px;
-
-    &_main {
-      height: 860px;
-      padding: 40px calc(50% - 525px);
-
-      .hero__subtitle {
-        padding-left: 38px;
-        font-size: 26px;
-
-        &:before { width: 28px }
-      }
-
-      h2 {
-        margin-bottom: 26px;
-        font-size: 120px;
-      }
-    }
 
     h2 {
       margin-bottom: 20px;
@@ -99,5 +82,27 @@
     p {
 
     }
+
+    &_main {
+      height: 860px;
+      padding: 188px calc(50% - 525px) 40px;
+      justify-content: flex-start;
+
+      .hero__subtitle {
+        padding-left: 48px;
+        font-size: 26px;
+
+        &:before {
+          width: 28px;
+          height: 3px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 26px;
+        font-size: 120px;
+      }
+    }
+
   }
 }
