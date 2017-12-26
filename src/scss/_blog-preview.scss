@@ -1,13 +1,12 @@
 .blog-preview {
-  padding: 40px 15px;
+  padding: 0 15px;
 
   &__list {
-
+    margin-bottom: 20px;
   }
 
   &__item {
-    padding-bottom: 30px;
-    margin-bottom: 32px;
+    padding: 40px 0;
     border-bottom: 2px solid #f3f3f3;
   }
 
@@ -67,6 +66,8 @@
 
     .arrow {
       color: #000;
+      font-size: 15px;
+      @include proximanova-semibold();
     }
 
     .social {
@@ -94,16 +95,15 @@
 }
 @media (min-width: $desktop) {
   .blog-preview {
-    padding: 80px calc(50% - 470px);
+    padding: 0 calc(50% - 470px);
 
     &__list {
-
+      margin-bottom: 41px;
     }
 
     &__item {
       display: flex;
-      padding-bottom: 80px;
-      margin-bottom: 82px;
+      padding: 80px 0;
     }
 
     &__picture {
@@ -143,7 +143,7 @@
 
       .arrow {
         order: 3;
-        color: #000;
+        font-size: 15px;
 
         &:first-child { order: 1 }
       }

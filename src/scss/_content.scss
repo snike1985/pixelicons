@@ -5,9 +5,9 @@
   line-height: 1.2;
   @include proximanova-light();
 
-  &__italic {
+  em {
+    display: block;
     padding-top: 6px;
-    font-style: italic;
     color: #999999;
   }
 
