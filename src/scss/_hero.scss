@@ -38,7 +38,7 @@
   }
 
   p {
-    max-width: 770px;
+    max-width: 810px;
     margin: 0 auto 10px;
   }
 
@@ -55,6 +55,9 @@
     line-height: 1.2;
     text-align: center;
     @include proximanova-regular();
+    transition: opacity .3s ease-in-out;
+
+    &:hover { opacity: .8 }
 
     &-ava {
       position: relative;

@@ -28,11 +28,11 @@
     }
   }
 
-  &__attention {
+  blockquote {
     display: block;
     position: relative;
     padding: 0 0 0 34px;
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
     font-size: 20px;
     color: rgb(0, 108, 231);
     line-height: 1.333;
@@ -123,9 +123,9 @@
       padding: 44px 0 87px;
     }
 
-    &__attention {
+    blockquote {
       padding: 0 0 0 34px;
-      margin-bottom: 99px;
+      margin: 0 0 99px 0;
       font-size: 30px;
     }
 
@@ -134,6 +134,9 @@
       align-items: center;
       padding-bottom: 48px;
       margin-bottom: 32px;
+      transition: opacity .3s ease-in-out;
+
+      &:hover { opacity: .8 }
 
       &-ava {
         margin: 0;

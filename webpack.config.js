@@ -21,6 +21,7 @@ module.exports = {
         blog_page: './blog_page',
         blogMain_page: './blogMain_page',
         index_page: './index_page',
+        freePack_page: './freePack_page',
         license_page: './license_page',
         privacyPolicy_page: './privacyPolicy_page',
     },
