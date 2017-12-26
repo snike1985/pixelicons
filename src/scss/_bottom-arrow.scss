@@ -1,0 +1,62 @@
+.bottom-arrow {
+  display: block;
+  position: relative;
+  height: 15px;
+  width: 10px;
+  margin: 0 auto;
+  color: #000;
+
+  &:after {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 6px;
+    height: 6px;
+    margin-right: -3px;
+    transform: rotate(135deg);
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: inherit;
+    box-sizing: border-box;
+    content: '';
+  }
+
+  &:before {
+    @include absoluteCenterX();
+    bottom: 1px;
+    width: 2px;
+    height: calc(100% - 1px);
+    box-sizing: border-box;
+    border-width: 0 2px 0 0;
+    border-style: solid;
+    border-color: inherit;
+    content: '';
+  }
+
+  &_revert {
+    transform: matrix(-1,0,0,1,0,0);
+  }
+}
+@media (min-width: $desktop) {
+  .bottom-arrow {
+    height: 29px;
+    width: 15px;
+
+    &:after {
+      width: 10px;
+      height: 10px;
+      margin-right: -5px;
+      transition: bottom .3s ease-in-out;
+    }
+
+    &:before {
+      transition: bottom .3s ease-in-out;
+    }
+
+    &:hover {
+
+      &:before { bottom: -4px }
+      &:after { bottom: -5px }
+    }
+  }
+}

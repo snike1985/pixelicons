@@ -11,6 +11,7 @@
   }
 
   &__head {
+    margin-bottom: 30px;
     font-size: 20px;
     color: rgb(0, 0, 1);
     line-height: 1.2;
@@ -20,7 +21,7 @@
 
     p {
       max-width: 770px;
-      margin: 0 auto 60px;
+      margin: 0 auto 20px;
     }
   }
 
@@ -98,9 +99,10 @@
 
     &__head {
       font-size: 30px;
+      margin-bottom: 75px;
 
       p {
-        margin-bottom: 124px;
+
       }
     }
 
