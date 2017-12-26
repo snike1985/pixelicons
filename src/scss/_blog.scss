@@ -1,0 +1,112 @@
+.blog {
+  padding: 30px 15px;
+  font-size: 22px;
+  color: rgb(51, 51, 51);
+  line-height: 1.364;
+
+  &__title {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    @include proximanova-semibold();
+  }
+
+  p {
+    margin-bottom: 20px;
+    @include proximanova-light();
+  }
+
+  > img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  &__attention {
+    display: block;
+    position: relative;
+    padding: 0 0 0 34px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: rgb(0, 108, 231);
+    line-height: 1.333;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: rgb(0, 108, 231);
+      content: '';
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f3f3f3;
+
+    &-ava {
+      position: relative;
+      overflow: hidden;
+      width: 97px;
+      height: 97px;
+      border-radius: 50%;
+
+      img {
+        @include absoluteCenter();
+        width: 100%;
+      }
+    }
+
+    &-info {
+      width: calc(100% - 97px);
+      padding: 0 0 0 26px;
+
+      dt {
+        font-size: 26px;
+        color: rgb(20, 23, 26);
+        line-height: 1.2;
+        @include proximanova-semibold();
+      }
+
+      dd {
+        font-size: 22px;
+        color: rgb(51, 51, 51);
+        line-height: 1.364;
+        @include proximanova-light();
+      }
+    }
+  }
+
+  &__comments {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .blog {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .blog {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .blog {
+
+  }
+}
+@media (min-width: $desktop) {
+  .blog {
+    padding: 0 calc(50% - 470px);
+
+
+  }
+}

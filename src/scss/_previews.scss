@@ -1,0 +1,59 @@
+.previews {
+  max-width: 830px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  text-align: center;
+
+  &__title {
+    display: block;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(100%/3 - 40px/3);
+    font-size: 22px;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    @include proximanova-light();
+  }
+
+  &__pic {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 196px;
+
+    img {
+      @include absoluteCenter();
+      width: 100%;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .previews {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .previews {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .previews {
+
+  }
+}
+@media (min-width: $desktop) {
+  .previews {
+
+  }
+}
+

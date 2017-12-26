@@ -33,7 +33,6 @@
   h2 {
     margin-bottom: 20px;
     font-size: 60px;
-    color: rgb(0, 0, 1);
     font-weight: 700;
     line-height: 0.97;
   }
@@ -47,6 +46,40 @@
     display: block;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  &__author {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center;
+    @include proximanova-regular();
+
+    &-ava {
+      position: relative;
+      overflow: hidden;
+      width: 48px;
+      height: 48px;
+      margin: 0 auto;
+      border-radius: 50%;
+
+      img {
+        @include absoluteCenter();
+        width: 100%;
+      }
+    }
+
+    &-name {
+
+      strong {
+        @include proximanova-semibold();
+      }
+    }
+  }
+
+  &_blog {
+    background-color: #006ce7;
+    color: #fff;
   }
 }
 @media (min-width: $phone-landscape) {

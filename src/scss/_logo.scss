@@ -1,8 +1,19 @@
 .logo {
+  display: flex;
+  align-items: center;
 
   img {
     display: block;
     height: 26px;
+  }
+
+  span {
+    display: block;
+    margin-left: 10px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    @include proximanova-regular();
   }
 }
 @media (min-width: $phone-landscape) {
@@ -25,6 +36,11 @@
 
     img {
       height: 38px;
+    }
+
+    span {
+      margin-left: 14px;
+      font-size: 16px;
     }
   }
 }

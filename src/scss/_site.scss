@@ -7,6 +7,7 @@
   z-index: 1;
   min-width: 320px;
   min-height: 100vh;
+  @include proximanova-regular();
 
   &__header {
     display: flex;
@@ -31,6 +32,23 @@
         @include proximanova-semibold();
 
         &:hover { opacity: .8 }
+      }
+    }
+
+    &_white {
+
+      .site__header-wrap {
+
+        a,
+        a:visited { color: #fff }
+      }
+
+      .menu-open {
+        border-color: #fff;
+
+        &:before {
+          background-color: #fff;
+        }
       }
     }
   }
