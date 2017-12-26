@@ -59,9 +59,6 @@
     line-height: 1.2;
     text-align: center;
     @include proximanova-regular();
-    transition: opacity .3s ease-in-out;
-
-    &:hover { opacity: .8 }
 
     &-ava {
       position: relative;
@@ -130,6 +127,12 @@
 
     &__author {
       padding: 38px 0;
+    }
+
+    a.hero__author {
+      transition: opacity .3s ease-in-out;
+
+      &:hover { opacity: .8 }
     }
 
     &_main {

@@ -24,6 +24,7 @@ module.exports = {
         index_page: './index_page',
         freePack_page: './freePack_page',
         license_page: './license_page',
+        pricing_page: './pricing_page',
         privacyPolicy_page: './privacyPolicy_page',
     },
     output: {

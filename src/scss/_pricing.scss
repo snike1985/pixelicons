@@ -1,0 +1,108 @@
+.pricing {
+  padding: 30px 15px;
+
+  &__card {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.07);
+
+    &_grey {
+      background-color: #fbfbfb;
+    }
+
+    &-icon {
+      margin-bottom: 15px;
+
+      img {
+        display: block;
+        height: 97px;
+        margin: 0 auto;
+      }
+    }
+
+    &-title {
+      display: block;
+      font-size: 26px;
+      color: rgb(21, 20, 20);
+      line-height: 1.2;
+      @include proximanova-regular();
+    }
+
+    &-price {
+      position: relative;
+      font-size: 80px;
+      color: rgb(21, 20, 20);
+      line-height: 1.2;
+      @include proximanova-light();
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 100%;
+        font-size: 40px;
+        color: inherit;
+        content: '$';
+      }
+    }
+
+    ul {
+      font-size: 19px;
+      color: rgb(21, 20, 20);
+      line-height: 1.684;
+
+      li {
+
+        strong {
+          @include proximanova-semibold();
+        }
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .pricing {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__card {
+      width: calc(50% - 15px);
+    }
+
+    &__info {
+      width: 100%;
+      background-color: #ccc;
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .pricing {
+
+  }
+}
+@media (min-width: $desktop) {
+  .pricing {
+    padding: 40px calc(50% - 610px) 40px calc(50% - 510px);
+
+    &__card {
+      width: 340px;
+    }
+
+    &__info {
+      width: 340px;
+    }
+  }
+}
+
