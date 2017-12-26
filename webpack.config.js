@@ -20,6 +20,7 @@ module.exports = {
         affiliate_page: './affiliate_page',
         blog_page: './blog_page',
         blogMain_page: './blogMain_page',
+        icons_page: './icons_page',
         index_page: './index_page',
         freePack_page: './freePack_page',
         license_page: './license_page',

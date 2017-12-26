@@ -72,6 +72,8 @@
       display: block;
     }
   }
+
+  .bottom-arrow { pointer-events: none }
 }
 @media (min-width: $phone-landscape) {
   .subscribe {
