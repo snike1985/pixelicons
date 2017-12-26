@@ -30,7 +30,7 @@
     }
   }
 
-  h2 {
+  h1, h2 {
     margin-bottom: 20px;
     font-size: 60px;
     font-weight: 700;
@@ -49,6 +49,7 @@
   }
 
   &__author {
+    padding: 20px 0;
     font-size: 14px;
     color: rgb(255, 255, 255);
     line-height: 1.2;
@@ -60,7 +61,7 @@
       overflow: hidden;
       width: 48px;
       height: 48px;
-      margin: 0 auto;
+      margin: 0 auto 16px;
       border-radius: 50%;
 
       img {
@@ -107,13 +108,17 @@
     padding: 62px calc(50% - 525px) 40px;
     font-size: 34px;
 
-    h2 {
+    h1, h2 {
       margin-bottom: 20px;
       font-size: 66px;
     }
 
     p {
 
+    }
+
+    &__author {
+      padding: 38px 0;
     }
 
     &_main {
@@ -131,11 +136,20 @@
         }
       }
 
-      h2 {
+      h1, h2 {
         margin-bottom: 26px;
         font-size: 120px;
       }
     }
 
+    &_blog {
+      padding-top: 148px;
+      padding-bottom: 0;
+
+      h1, h2 {
+        line-height: 1.2;
+      }
+
+    }
   }
 }

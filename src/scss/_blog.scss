@@ -1,61 +1,65 @@
 .blog {
   padding: 30px 15px;
-  font-size: 22px;
+  font-size: 16px;
   color: rgb(51, 51, 51);
   line-height: 1.364;
 
   &__title {
     display: block;
-    margin-bottom: 30px;
-    font-size: 30px;
+    margin-bottom: 15px;
+    font-size: 20px;
     color: rgb(0, 0, 0);
     line-height: 1.2;
     @include proximanova-semibold();
   }
 
   p {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     @include proximanova-light();
   }
 
-  > img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto 20px;
+  &__pic {
+    padding: 20px 0 40px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 
   &__attention {
     display: block;
     position: relative;
     padding: 0 0 0 34px;
-    margin-bottom: 30px;
-    font-size: 30px;
+    margin-bottom: 40px;
+    font-size: 20px;
     color: rgb(0, 108, 231);
     line-height: 1.333;
 
     &:before {
       position: absolute;
-      top: 0;
+      top: 8px;
       left: 0;
       width: 5px;
-      height: 100%;
+      bottom: 9px;
       background-color: rgb(0, 108, 231);
       content: '';
     }
   }
 
   &__author {
-    display: flex;
-    align-items: center;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-bottom: 3px solid #f3f3f3;
 
     &-ava {
+      display: block;
       position: relative;
       overflow: hidden;
       width: 97px;
       height: 97px;
+      margin: 0 auto 20px;
       border-radius: 50%;
 
       img {
@@ -65,18 +69,16 @@
     }
 
     &-info {
-      width: calc(100% - 97px);
-      padding: 0 0 0 26px;
 
       dt {
-        font-size: 26px;
+        font-size: 18px;
         color: rgb(20, 23, 26);
         line-height: 1.2;
         @include proximanova-semibold();
       }
 
       dd {
-        font-size: 22px;
+        font-size: 14px;
         color: rgb(51, 51, 51);
         line-height: 1.364;
         @include proximanova-light();
@@ -85,7 +87,7 @@
   }
 
   &__comments {
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 }
 @media (min-width: $phone-landscape) {
@@ -105,8 +107,50 @@
 }
 @media (min-width: $desktop) {
   .blog {
-    padding: 0 calc(50% - 470px);
+    padding: 83px calc(50% - 400px);
+    font-size: 22px;
 
+    &__title {
+      margin-bottom: 38px;
+      font-size: 30px;
+    }
 
+    p {
+      margin-bottom: 30px;
+    }
+
+    &__pic {
+      padding: 44px 0 87px;
+    }
+
+    &__attention {
+      padding: 0 0 0 34px;
+      margin-bottom: 99px;
+      font-size: 30px;
+    }
+
+    &__author {
+      display: flex;
+      align-items: center;
+      padding-bottom: 48px;
+      margin-bottom: 32px;
+
+      &-ava {
+        margin: 0;
+      }
+
+      &-info {
+        width: calc(100% - 97px);
+        padding: 0 40px 0 26px;
+
+        dt {
+          font-size: 26px;
+        }
+
+        dd {
+          font-size: 22px;
+        }
+      }
+    }
   }
 }
