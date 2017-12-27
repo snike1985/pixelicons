@@ -13,12 +13,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include absoluteCenterX();
+    position: fixed;
     top: 0;
-    width: 100%;
-    max-width: 1530px;
+    right: 0;
+    left: 0;
     padding: 15px;
     z-index: 2;
+    transition: background .3s linear, box-shadow .3s linear, height .3s linear, transform .3s linear;
 
     &-wrap {
       display: flex;
@@ -33,6 +34,18 @@
 
         &:hover { opacity: .8 }
       }
+    }
+
+    &.hide {
+      background-color: transparent;
+      box-shadow: none;
+      transform: translate(0,-100%);
+    }
+
+    &_fixed {
+      height: 68px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
     }
 
     &_white {
@@ -91,11 +104,16 @@
   .site {
 
     &__header {
-      padding: 45px 15px;
+      padding: 45px calc(50% - 780px);
+
+      .logo {
+        margin-left: 15px;
+      }
 
       &-wrap {
         position: relative;
         top: -4px;
+        padding-right: 15px;
 
         a,
         a:visited {

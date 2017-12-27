@@ -6,11 +6,30 @@ class Menu {
         this.btnOpen = document.getElementsByClassName('menu-open')[0];
         this.btnClose = obj.getElementsByClassName('menu__close')[0];
         this.body = document.getElementsByTagName('body')[0];
+        this.header = document.getElementsByClassName('site__header')[0];
+        this.lastScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
         this.onEvents();
     }
 
     onEvents() {
+        window.addEventListener('scroll', () => {
+            let curScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+            if ( curScroll > 0 ) {
+                this.header.classList.add('site__header_fixed');
+            } else {
+                this.header.classList.remove('site__header_fixed');
+            }
+
+            if (curScroll > this.lastScrollTop){
+                this.header.classList.add('hide');
+            } else {
+                this.header.classList.remove('hide');
+            }
+
+            this.lastScrollTop = curScroll;
+        });
         this.obj.addEventListener('click', () => {
             this.obj.classList.remove('active');
             this.body.classList.remove('menu-active');
