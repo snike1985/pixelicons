@@ -34,7 +34,7 @@
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.12);
 
-    input[type=email] {
+    input {
       width: 100%;
       height: 40px;
       max-width: 352px;
@@ -112,7 +112,7 @@
       max-width: 886px;
       padding: 73px 15px;
 
-      input[type=email] {
+      input {
         height: 52px;
         margin: 0 auto 40px;
         font-size: 18px;

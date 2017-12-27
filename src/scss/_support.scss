@@ -1,0 +1,24 @@
+.support {
+  padding: 30px 15px;
+}
+@media (min-width: $phone-landscape) {
+  .support {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .support {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .support {
+
+  }
+}
+@media (min-width: $desktop) {
+  .support {
+    padding: 60px calc(50% - 525px);
+  }
+}
+
