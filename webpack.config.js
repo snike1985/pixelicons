@@ -26,6 +26,7 @@ module.exports = {
         license_page: './license_page',
         pricing_page: './pricing_page',
         privacyPolicy_page: './privacyPolicy_page',
+        support_page: './support_page',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
