@@ -60,6 +60,38 @@
     }
   }
 }
+
+.tab-navigation {
+  @include absoluteCenter();
+  display: flex;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 8px;
+    margin: 0 14px;
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.2;
+    cursor: pointer;
+    border-bottom: 5px solid transparent;
+    transition: color .3s ease-in-out;
+    @include proximanova-semibold();
+
+    &:hover { color: #000 }
+
+    &.active {
+      color: rgb(0, 0, 0);
+      border-bottom-color: #000;
+      @include proximanova-bold();
+    }
+  }
+}
 @media (min-width: $phone-landscape) {
   .tab {
 

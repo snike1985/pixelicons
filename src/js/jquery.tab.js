@@ -20,7 +20,9 @@ import $ from 'jquery';
             _activeControl = _tabsControlsWrap.find('.active'),
             _tabsSlider = _obj.find('.tab__controls-slider'),
             _tabsContentWrap = _obj.find('.tab__content'),
-            _tabsContent = _tabsContentWrap.find('.tab__content-item');
+            _tabsContent = _tabsContentWrap.find('.tab__content-item'),
+            _tabsNavigation = $('.tab-navigation'),
+            _tabsNavigationItems = _tabsNavigation.find('.tab-navigation__item');
 
         //private methods
         var _addEvents = function() {
@@ -33,6 +35,19 @@ import $ from 'jquery';
                             _tabsControls.removeClass('active');
                             activeElem.addClass('active');
                             _sliding(activeElem);
+                        }
+
+                    }
+                });
+
+                _tabsNavigationItems.on({
+                    'click': function () {
+                        var activeElem = $(this);
+
+                        if ( !activeElem.hasClass('active') ) {
+                            _tabsNavigationItems.removeClass('active');
+                            activeElem.addClass('active');
+                            _tabsControls.eq(activeElem.index()).trigger('click');
                         }
 
                     }
