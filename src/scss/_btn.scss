@@ -30,4 +30,10 @@ button.btn {
   &:active {
     opacity: .5;
   }
+
+  &_transparent {
+    background-color: transparent;
+    color: #000;
+    border-color: transparent;
+  }
 }

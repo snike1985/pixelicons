@@ -22,7 +22,7 @@
   }
 
   p {
-    margin: 0 0 40px;
+    margin: 0 0 20px;
 
     span {
       display: block;
@@ -40,7 +40,9 @@
 
     .btn {
       width: 100%;
-      margin-bottom: 19px;
+      margin-top: 3px;
+
+      &:first-child { margin-top: 0 }
     }
   }
 
@@ -81,7 +83,7 @@
 @media (min-width: $desktop) {
   .thank-you {
     min-height: calc(100vh - 77px);
-    padding: 24px calc(50% - 525px);
+    padding: 41px calc(50% - 525px) 24px;
     font-size: 34px;
 
     &__title {
