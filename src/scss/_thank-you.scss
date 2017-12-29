@@ -1,0 +1,97 @@
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: calc(100vh - 44px);
+  padding: 40px 15px;
+  font-size: 20px;
+  color: rgb(0, 0, 1);
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: rgb(0, 0, 1);
+    font-weight: 700;
+    line-height: 0.97;
+  }
+
+  p {
+    margin: 0 0 40px;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 257px;
+    min-height: 92px;
+    margin: 0 auto;
+
+    .btn {
+      width: 100%;
+      margin-bottom: 19px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    transition: opacity .3s ease-in-out;
+    @include proximanova-regular();
+
+    &:hover { opacity: .8 }
+  }
+
+  .social {
+    @include absoluteCenterX();
+    bottom: 0;
+
+    &__item {
+      margin-bottom: 0;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .thank-you {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .thank-you {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .thank-you {
+
+  }
+}
+@media (min-width: $desktop) {
+  .thank-you {
+    min-height: calc(100vh - 77px);
+    padding: 24px calc(50% - 525px);
+    font-size: 34px;
+
+    &__title {
+      margin-bottom: 29px;
+      font-size: 66px;
+    }
+
+    p {
+      margin: 0 0 90px;
+    }
+  }
+}
+
